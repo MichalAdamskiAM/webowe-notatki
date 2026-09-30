@@ -17,6 +17,8 @@ function App() {
     kurs, numer: index + 1
   })).filter(({ kurs }) => kurs.toLowerCase().includes(szukaj.toLowerCase())).sort((a, b) => rosnaco ? a.kurs.localeCompare(b.kurs) : b.kurs.localeCompare(a.kurs))
 
+  const [status, setStatus] = useState(null)
+
   function handleSubmit(event) {
     event.preventDefault()
 
@@ -28,8 +30,10 @@ function App() {
 
     if (kurs !== undefined) {
       console.log(kurs)
+      setStatus({ typ: 'success', tresc: `${imienazwisko} zapisany(-a) na kurs: ${kurs}` })
     } else {
       console.log('Nieprawidłowy numer kursu')
+      setStatus({ typ: 'danger', tresc: 'Niepoprawny numer kursu' })
     }
   }
 
@@ -64,6 +68,12 @@ function App() {
           <li key={numer} value={numer}>{kurs}</li>
         ))}
       </ol>
+
+      {status && (
+        <div className={`alert alert-${status.typ}`}>
+          {status.tresc}
+        </div>
+      )}
 
       <form onSubmit={handleSubmit}>
         <div className="form-group">
