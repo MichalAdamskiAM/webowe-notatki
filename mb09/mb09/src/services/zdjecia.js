@@ -10,7 +10,7 @@ export async function pobierzZdjecia() {
 
 export async function pobierzZdjecie(id) {
     const lista = await pobierzZdjecia()
-    return lista.find(z => z.id === Number(id) ?? null)    
+    return lista.find(z => z.id === Number(id))
 }
 
 export function usunZdjecie(id){
