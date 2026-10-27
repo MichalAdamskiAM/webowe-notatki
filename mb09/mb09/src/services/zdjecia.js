@@ -22,3 +22,9 @@ export function przelaczUlubione(id) {
     zdjecia = zdjecia.map(z => (z.id === id ? {...z, favorite: !z.favorite} : z))
     return zdjecia
 }
+
+export function dodajZdjecie(nowe) {
+    const noweId = Math.max(...zdjecia.map(z => z.id)) + 1
+    zdjecia = [...zdjecia, {...nowe, id: noweId, favorite: false}]
+    return zdjecia
+}

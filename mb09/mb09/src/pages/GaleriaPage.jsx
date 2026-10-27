@@ -58,3 +58,5 @@ function GaleriaPage(){
         </>
     )
 }
+
+export default GaleriaPage

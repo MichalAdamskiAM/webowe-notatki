@@ -54,7 +54,7 @@ function DodajPage(){
                 </div>
                 <div className="col-12">
                     <label htmlFor="opis" className="form-label">Opis</label>
-                    <textarea id="opis" className="form-control" rows="3" value={formularz/description} onChange={zmienPole('description')} />
+                    <textarea id="opis" className="form-control" rows="3" value={formularz.description} onChange={zmienPole('description')} />
                 </div>
                 <div className="col-12 d-flex gap-2">
                     <button type="submit" className="btn btn-primary">Zapisz</button>

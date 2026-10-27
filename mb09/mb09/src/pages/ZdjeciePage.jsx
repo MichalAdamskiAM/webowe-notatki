@@ -9,7 +9,7 @@ function ZdjeciePage(){
     if(isLoading) return <p className="text-muted m-4">Ładowanie...</p>
     if(error) return <div className="alert alert-danger m-4">{error}</div>
 
-    const zdjecie = zdjecie.find(z => z.id == Number(id))
+    const zdjecie = zdjecia.find(z => z.id == Number(id))
 
     if(!zdjecie){
         return (
