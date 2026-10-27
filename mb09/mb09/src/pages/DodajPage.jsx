@@ -48,8 +48,21 @@ function DodajPage(){
                         <option value="miasto" disabled>Miasto</option>
                     </select>
                 </div>
-                {/* <div className="col-12"></div> */}
+                <div className="col-12">
+                    <label htmlFor="obrazek" className="form-label">Adres URL zdjecia</label>
+                    <input id="obrazek" className="form-control" placeholder="https://..." value={formularz.image} onChange={zmienPole('image')} />
+                </div>
+                <div className="col-12">
+                    <label htmlFor="opis" className="form-label">Opis</label>
+                    <textarea id="opis" className="form-control" rows="3" value={formularz/description} onChange={zmienPole('description')} />
+                </div>
+                <div className="col-12 d-flex gap-2">
+                    <button type="submit" className="btn btn-primary">Zapisz</button>
+                    <Link to="/" className="btn btn-secondary">Anuluj</Link>
+                </div>
             </form>
         </div>
     )
 }
+
+export default DodajPage
