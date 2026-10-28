@@ -3,8 +3,6 @@ import { useState } from "react";
 
 export default function Katalog({lista}){
 
-    // - Filtr po polu `tytul` — wyszukiwanie tekstowe, fragment nazwy, bez wielkości liter
-
     const [filter, setFilter] = useState("")
 
     const widoczne = lista.filter(waluta => {
@@ -17,7 +15,7 @@ export default function Katalog({lista}){
             <input onChange={value => setFilter(value)} className="form-control" value={filter} />
 
             {widoczne.map(waluta =>
-                <KartaZasobu key={waluta.numer} {...waluta} />
+                <KartaZasobu key={waluta.numer} waluta={waluta} />
             )}
         </>
     )
