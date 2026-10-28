@@ -36,7 +36,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Katalog lista={lista} />}></Route>
       <Route path='/dodaj' element={<DodajPage></DodajPage>}></Route>
-      <Route path='/:id' element={<SzczegolyPage />}></Route>
+      <Route path='/:id' element={<SzczegolyPage lista={lista} />}></Route>
       <Route path='*' element={<NotFoundPage />}></Route>
     </Routes>
     </>
