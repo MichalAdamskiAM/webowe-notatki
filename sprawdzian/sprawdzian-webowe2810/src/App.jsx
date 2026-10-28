@@ -3,8 +3,11 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
-import { Link, Route } from 'react-router-dom'
+import { Link, Route, Routes } from 'react-router-dom'
 import SzczegolyPage from './pages/SzczegolyPage'
+import Katalog from './components/Katalog'
+import DodajPage from './pages/DodajPage'
+import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
   const [status, setStatus] = useState("ladowanie")
