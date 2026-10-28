@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import { Link, Route } from 'react-router-dom'
+import SzczegolyPage from './pages/SzczegolyPage'
 
 function App() {
   const [status, setStatus] = useState("ladowanie")
@@ -31,8 +32,8 @@ function App() {
     <Link to="/dodaj"></Link>
     <Routes>
       <Route path='/' element={<Katalog lista={lista} />}></Route>
-      <Route path='/dodaj' element={}></Route>
-      <Route path='/:id' element={}></Route>
+      <Route path='/dodaj' element={<DodajPage></DodajPage>}></Route>
+      <Route path='/:id' element={<SzczegolyPage />}></Route>
       <Route path='*' element={<NotFoundPage />}></Route>
     </Routes>
     </>
