@@ -1,0 +1,37 @@
+[
+  {
+    "numer": 1,
+    "tytul": "Złoty",
+    "grupa": "Europejska",
+    "punkty": 28,
+    "wyprzedany": true
+  },
+  {
+    "numer": 2,
+    "tytul": "Euro",
+    "grupa": "Amerykańska",
+    "punkty": 45,
+    "wyprzedany": false
+  },
+  {
+    "numer": 3,
+    "tytul": "Dolar",
+    "grupa": "Azjatycka",
+    "punkty": 62,
+    "wyprzedany": true
+  },
+  {
+    "numer": 4,
+    "tytul": "Funt",
+    "grupa": "Europejska",
+    "punkty": 79,
+    "wyprzedany": true
+  },
+  {
+    "numer": 5,
+    "tytul": "Frank",
+    "grupa": "Amerykańska",
+    "punkty": 96,
+    "wyprzedany": false
+  }
+]
