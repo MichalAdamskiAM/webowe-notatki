@@ -5,6 +5,21 @@ import { dodajZdjecie } from '../services/zdjecia.js'
 
 const PUSTY_FORMULARZ = { title: "", category: "", image: "", description: "" }
 
+/**
+ * @typedef {Object} ZdjecieFormularz
+ * @property {string} title - Tytuł zdjęcia.
+ * @property {string} category - Kategoria zdjęcia (np. "gory", "morze", "miasto").
+ * @property {string} image - Adres URL miniatury oraz dużego zdjęcia.
+ * @property {string} description - Opis zdjęcia.
+ */
+
+/**
+ * Komponent strony służący do dodawania nowego zdjęcia poprzez formularz.
+ * Zarządza stanem formularza, obsługuje walidację/stany ładowania oraz błędy z hooka {@link useZdjecia}.
+ * 
+ * @component
+ * @returns {JSX.Element} Formularz dodawania zdjęcia lub komunikat ładowania/błędu.
+ */
 function DodajPage(){
     const navigate = useNavigate()
     const { isLoading, error } = useZdjecia()
